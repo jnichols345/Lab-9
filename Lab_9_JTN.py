@@ -8,7 +8,7 @@ def encode_password(password):
     final_pw = ''.join(new_pw)
     return final_pw
 
-def decode_password(password)
+def decode_password(password):
 
 
 
