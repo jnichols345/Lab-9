@@ -8,16 +8,16 @@ def encode_password(password):
     final_pw = ''.join(new_pw)
     return final_pw
 
-def decode_password(password):
+def decode(password):
+    decoded = ""
 
+    for i in range(len(password)):
+        decoded += str(int(password[i]) - 3)
 
-
-
-
-run = True
+    return decoded
 
 def main():
-    while run:
+    while True:
         print('1. Encode\n2. Decode\n3. Quit')
         choice = int(input('Enter your choice: '))
         if choice == 1:
@@ -27,7 +27,7 @@ def main():
 
         if choice == 2:
             pw = input('Enter your encoded password: ')
-            new_pw = decode_password(pw)
+            new_pw = decode(pw)
             print(f'Your password is: {new_pw}')
 
         if choice == 3: run = False
@@ -37,7 +37,8 @@ def main():
 
 
 
-
+if __name__ == "__main__":
+    main()
 
 
 
